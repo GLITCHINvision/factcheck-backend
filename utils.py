@@ -11,7 +11,8 @@ NEWS_API_KEY = os.getenv("NEWS_API_KEY")
 
 
 try:
-    summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+    summarizer = pipeline("summarization", model="Falconsai/text_summarization")
+
 except Exception as e:
     summarizer = None
     print(f" Failed to load summarizer: {e}")
