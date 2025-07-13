@@ -8,7 +8,12 @@ from utils import (
 )
 
 app = Flask(__name__)
-CORS(app, origins=["https://factcheck-frontend.vercel.app/"])
+CORS(app, origins=[
+    "https://factcheck-frontend.vercel.app",
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "http://localhost:3002"
+])
 
 
 @app.route("/fact-check", methods=["POST"])
